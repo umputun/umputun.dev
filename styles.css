@@ -1,0 +1,72 @@
+.card-img-top {
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.custom-bg-dark {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.card-container {
+    display: flex;
+    align-items: stretch;
+}
+
+.card-body {
+    min-height: 200px;
+    flex: 1;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.custom-card {
+    background-color: #3b4449;
+    color: #fff;
+    border: 1px solid #323232;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative; /* Add position relative for pseudo-element */
+}
+
+.custom-card:hover {
+    background-color: #354552;
+    border-color: #414e50;
+    border-width: 3px;
+    padding: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.custom-card:hover::after {
+    content: '→';
+    position: absolute;
+    bottom: -1em;
+    right: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+}
+
+.card-text {
+    position: relative;
+    line-height: 1.4em;
+    max-height: 8.4em;
+    overflow: hidden;
+}
+
+.card-text.overflowing::after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 20px 1px 45px;
+    background: none; /* Remove the gradient background */
+    color: #fff;
+}
