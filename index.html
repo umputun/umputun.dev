@@ -3,26 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
     <title>Umputun's Development Projects | Self-Hosted Tools & Applications</title>
     <meta name="description" content="Discover a variety of self-hosted applications and tools developed by Umputun. Explore projects like Remark42, Reproxy, Spot, SysAgent, and more.">
     <link rel="canonical" href="https://umputun.dev" />
 
+    <!-- Open Graph tags -->
     <meta property="og:title" content="Umputun's Development Projects | Self-Hosted Tools & Applications">
     <meta property="og:description" content="Discover a variety of self-hosted applications and tools developed by Umputun. Explore projects like Remark42, Reproxy, Spot, SysAgent, and more.">
     <meta property="og:image" content="images/umputun.png">
     <meta property="og:url" content="https://umputun.dev">
     <meta property="og:site_name" content="Umputun's Development Projects">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Umputun's Development Projects | Self-Hosted Tools & Applications">
+    <meta name="twitter:description" content="Discover a variety of self-hosted applications and tools developed by Umputun.">
+    <meta name="twitter:image" content="images/umputun.png">
 
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body class="custom-bg-dark">
+<a href="#main-content" class="visually-hidden-focusable bg-dark text-white p-2">Skip to main content</a>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
     <div class="container">
         <a class="navbar-brand" href="#">Umputun's Development Projects</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,34 +40,37 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/umputun" target="_blank">GitHub</a>
+                    <a class="nav-link" href="https://github.com/umputun" target="_blank" rel="noopener">GitHub</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://t.me/umputun" target="_blank">Telegram</a>
+                    <a class="nav-link" href="https://t.me/umputun" target="_blank" rel="noopener">Telegram</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://twitter.com/umputun" target="_blank">Twitter</a>
+                    <a class="nav-link" href="https://twitter.com/umputun" target="_blank" rel="noopener">Twitter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="mailto:umputun@gmail.com" target="_blank">Email</a>
+                    <a class="nav-link" href="mailto:umputun@gmail.com">Email</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container mt-5">
-
-    <div class="row">
-        <div class="col-md-6 col-lg-4">
-            <div class="card mb-4 custom-card" onclick="window.open('https://remark42.com', '_blank');" style="cursor: pointer;" >
-                <img src="images/remark42.png" class="card-img-top" alt="Remark42">
-                <div class="card-body">
-                    <h5 class="card-title">Remark42</h5>
-                    <p class="card-text">Remark42 is a self-hosted, lightweight, and simple (yet functional) comment engine, which doesn't spy on users. It can be embedded into blogs, articles, or any other place where readers add comments.</p>
-                </div>
+<main id="main-content" class="container mt-5">
+    <h1 class="visually-hidden">Umputun's Development Projects</h1>
+    
+    <section class="row">
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Remark42 website">
+                <a href="https://remark42.com" class="stretched-link" target="_blank" rel="noopener">
+                    <img src="images/remark42.png" class="card-img-top" alt="Remark42">
+                    <div class="card-body">
+                        <h5 class="card-title">Remark42</h5>
+                        <p class="card-text">Remark42 is a self-hosted, lightweight, and simple (yet functional) comment engine, which doesn't spy on users. It can be embedded into blogs, articles, or any other place where readers add comments.</p>
+                    </div>
+                </a>
             </div>
-        </div>
+        </article>
         <div class="col-md-6 col-lg-4">
             <div class="card mb-4 custom-card" onclick="window.open('https://reproxy.io', '_blank');" style="cursor: pointer;">
                 <img src="images/reproxy.png" class="card-img-top" alt="Reproxy">
@@ -209,6 +221,43 @@
                 </div>
             </div>
         </div>
+
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Echo-HTTP website">
+                <a href="https://echo.umputun.com" class="stretched-link" target="_blank" rel="noopener">
+                    <img src="images/echo-http.png" class="card-img-top" alt="Echo-HTTP">
+                    <div class="card-body">
+                        <h5 class="card-title">Echo-HTTP</h5>
+                        <p class="card-text">Echo-HTTP is a simple service that responds with a JSON-formatted echo of the incoming request. Useful for debugging HTTP requests, testing webhooks, and understanding what information is passed in headers.</p>
+                    </div>
+                </a>
+            </div>
+        </article>
+        
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Proxy-Cron website">
+                <a href="https://proxy-cron.umputun.dev" class="stretched-link" target="_blank" rel="noopener">
+                    <img src="images/proxy-cron.png" class="card-img-top" alt="Proxy-Cron">
+                    <div class="card-body">
+                        <h5 class="card-title">Proxy-Cron</h5>
+                        <p class="card-text">A smart HTTP proxy with crontab scheduling. It proxies requests during specified times and serves cached responses outside the schedule, ideal for systems that aren't operational 24/7 but still need monitoring.</p>
+                    </div>
+                </a>
+            </div>
+        </article>
+        
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit DKLL GitHub repository">
+                <a href="https://github.com/umputun/dkll" class="stretched-link" target="_blank" rel="noopener">
+                    <img src="images/dkll.png" class="card-img-top" alt="DKLL">
+                    <div class="card-body">
+                        <h5 class="card-title">DKLL</h5>
+                        <p class="card-text">A comprehensive logging solution for Docker environments with agent, server, and CLI components. Collects logs from all containers, provides flexible storage options, and offers powerful search and filtering capabilities.</p>
+                    </div>
+                </a>
+            </div>
+        </article>
+        
         <div class="col-md-6 col-lg-4">
             <div class="card mb-4 custom-card" onclick="window.open('https://github.com/umputun/esvn', '_blank');" style="cursor: pointer;">
                 <img src="images/esvn.png" class="card-img-top" alt="eSvn">
@@ -228,28 +277,94 @@
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
+</main>
 
-</div>
+<footer class="container mt-4 pb-4 text-center">
+    <p>&copy; 2025 Umputun</p>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "SoftwareApplication",
+      "position": 1,
+      "name": "Remark42",
+      "description": "Remark42 is a self-hosted, lightweight, and simple comment engine that doesn't spy on users.",
+      "url": "https://remark42.com",
+      "applicationCategory": "DeveloperApplication"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 2,
+      "name": "Reproxy",
+      "description": "Reproxy is a simple edge HTTP(s) server / reverse proxy supporting various providers.",
+      "url": "https://reproxy.io",
+      "applicationCategory": "DeveloperApplication"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 3,
+      "name": "Spot",
+      "description": "Spot is a powerful and easy-to-use tool for effortless deployment and configuration management.",
+      "url": "https://spot.umputun.dev",
+      "applicationCategory": "DeveloperApplication"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 4,
+      "name": "Echo-HTTP",
+      "description": "Echo-HTTP is a simple service that responds with a JSON-formatted echo of the incoming request.",
+      "url": "https://echo.umputun.com",
+      "applicationCategory": "DeveloperApplication"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 5,
+      "name": "Proxy-Cron",
+      "description": "A smart HTTP proxy with crontab scheduling that serves cached responses outside scheduled times.",
+      "url": "https://proxy-cron.umputun.dev",
+      "applicationCategory": "DeveloperApplication"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 6,
+      "name": "DKLL",
+      "description": "A comprehensive logging solution for Docker environments with agent, server, and CLI components.",
+      "url": "https://github.com/umputun/dkll",
+      "applicationCategory": "DeveloperApplication"
+    }
+  ]
+}
+</script>
 
 <script src="bootstrap.bundle.min.js"></script>
 <script>
+    function debounce(func, wait) {
+        let timeout;
+        return function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(func, wait);
+        };
+    }
+    
     function checkOverflow() {
-        document.querySelectorAll('.card-text').forEach(el => {
-            el.classList.remove('overflowing');
-
-            if (el.scrollHeight > el.clientHeight) {
-                el.classList.add('overflowing');
-            }
-        });
+        const cardTexts = document.querySelectorAll('.card-text');
+        for (let i = 0; i < cardTexts.length; i++) {
+            const el = cardTexts[i];
+            const isOverflowing = el.scrollHeight > el.clientHeight;
+            el.classList.toggle('overflowing', isOverflowing);
+        }
     }
 
     window.onload = checkOverflow;
-    window.onresize = checkOverflow;
+    window.onresize = debounce(checkOverflow, 250);
 </script>
 <script async defer data-website-id="0fb972b8-469b-40c0-b0d4-9d9488b328a5" src="https://analytics.umputun.com/uman.js"></script>
 
 </body>
-
 </html>
