@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- No background rectangle -->
+  
+  <!-- Main text - UAIC in a single line with wider, bolder font -->
+  <text x="256" y="260" font-family="Arial Black, Gadget, sans-serif" font-weight="900" font-size="200" text-anchor="middle" fill="#42a5f5" stroke="#42a5f5" stroke-width="2">UAIC</text>
+</svg>
