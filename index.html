@@ -33,6 +33,31 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Inline critical CSS -->
+    <style>
+        :root {
+            --dark-bg: #343a40;
+            --card-bg: #3b4449;
+            --card-hover-bg: #354552;
+            --text-color: #fff;
+        }
+        .custom-bg-dark {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+        }
+        .card-img-top {
+            height: 120px;
+            object-fit: contain;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .custom-card {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 
 <body class="custom-bg-dark">
@@ -70,7 +95,10 @@
         <article class="col-md-6 col-lg-4">
             <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Remark42 website">
                 <a href="https://remark42.com" class="stretched-link" target="_blank" rel="noopener">
-                    <img src="images/remark42.png" class="card-img-top" alt="Remark42" fetchpriority="high">
+                    <picture>
+                        <source srcset="images/webp/remark42.webp" type="image/webp">
+                        <img src="images/remark42.png" class="card-img-top" alt="Remark42" fetchpriority="high" width="250" height="250">
+                    </picture>
                     <div class="card-body">
                         <h5 class="card-title">Remark42</h5>
                         <p class="card-text">Remark42 is a self-hosted, lightweight, and simple (yet functional) comment engine, which doesn't spy on users. It can be embedded into blogs, articles, or any other place where readers add comments.</p>
@@ -81,7 +109,10 @@
         <article class="col-md-6 col-lg-4">
             <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Reproxy website">
                 <a href="https://reproxy.io" class="stretched-link" target="_blank" rel="noopener">
-                    <img src="images/reproxy.png" class="card-img-top" alt="Reproxy" fetchpriority="high">
+                    <picture>
+                        <source srcset="images/webp/reproxy.webp" type="image/webp">
+                        <img src="images/reproxy.png" class="card-img-top" alt="Reproxy" fetchpriority="high" width="761" height="250">
+                    </picture>
                     <div class="card-body">
                         <h5 class="card-title">Reproxy</h5>
                         <p class="card-text">Reproxy is a simple edge HTTP(s) server / reverse proxy supporting various providers. One or more providers supply information about the requested server, requested URL, destination URL, and health check URL.</p>
@@ -92,7 +123,10 @@
         <article class="col-md-6 col-lg-4">
             <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Spot website">
                 <a href="https://spot.umputun.dev" class="stretched-link" target="_blank" rel="noopener">
-                    <img src="images/spot.png" class="card-img-top" alt="Spot" loading="lazy">
+                    <picture>
+                        <source srcset="images/webp/spot.webp" type="image/webp">
+                        <img src="images/spot.png" class="card-img-top" alt="Spot" loading="lazy" width="658" height="250">
+                    </picture>
                     <div class="card-body">
                         <h5 class="card-title">Spot</h5>
                         <p class="card-text">Spot is a powerful and easy-to-use tool for effortless deployment and configuration management. It allows users to define a playbook with the list of tasks and targets.</p>
