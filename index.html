@@ -16,12 +16,19 @@
     <meta property="og:url" content="https://umputun.dev">
     <meta property="og:site_name" content="Umputun's Development Projects">
     <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
 
     <!-- Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Umputun's Development Projects | Self-Hosted Tools & Applications">
     <meta name="twitter:description" content="Discover a variety of self-hosted applications and tools developed by Umputun.">
     <meta name="twitter:image" content="images/umputun.png">
+
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://analytics.umputun.com">
+    <link rel="preload" href="bootstrap.min.css" as="style">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="bootstrap.bundle.min.js" as="script">
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="bootstrap.min.css" media="screen">
@@ -63,7 +70,7 @@
         <article class="col-md-6 col-lg-4">
             <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Remark42 website">
                 <a href="https://remark42.com" class="stretched-link" target="_blank" rel="noopener">
-                    <img src="images/remark42.png" class="card-img-top" alt="Remark42">
+                    <img src="images/remark42.png" class="card-img-top" alt="Remark42" fetchpriority="high">
                     <div class="card-body">
                         <h5 class="card-title">Remark42</h5>
                         <p class="card-text">Remark42 is a self-hosted, lightweight, and simple (yet functional) comment engine, which doesn't spy on users. It can be embedded into blogs, articles, or any other place where readers add comments.</p>
@@ -71,34 +78,40 @@
                 </a>
             </div>
         </article>
-        <div class="col-md-6 col-lg-4">
-            <div class="card mb-4 custom-card" onclick="window.open('https://reproxy.io', '_blank');" style="cursor: pointer;">
-                <img src="images/reproxy.png" class="card-img-top" alt="Reproxy">
-                <div class="card-body">
-                    <h5 class="card-title">Reproxy</h5>
-                    <p class="card-text">Reproxy is a simple edge HTTP(s) server / reverse proxy supporting various providers. One or more providers supply information about the requested server, requested URL, destination URL, and health check URL.</p>
-                </div>
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Reproxy website">
+                <a href="https://reproxy.io" class="stretched-link" target="_blank" rel="noopener">
+                    <img src="images/reproxy.png" class="card-img-top" alt="Reproxy" fetchpriority="high">
+                    <div class="card-body">
+                        <h5 class="card-title">Reproxy</h5>
+                        <p class="card-text">Reproxy is a simple edge HTTP(s) server / reverse proxy supporting various providers. One or more providers supply information about the requested server, requested URL, destination URL, and health check URL.</p>
+                    </div>
+                </a>
             </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="card mb-4 custom-card" onclick="window.open('https://spot.umputun.dev', '_blank');" style="cursor: pointer;">
-                <img src="images/spot.png" class="card-img-top" alt="Spot">
-                <div class="card-body">
-                    <h5 class="card-title">Spot</h5>
-                    <p class="card-text">Spot is a powerful and easy-to-use tool for effortless deployment and configuration management. It allows users to define a playbook with the list of tasks and targets.</p>
-                </div>
+        </article>
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Spot website">
+                <a href="https://spot.umputun.dev" class="stretched-link" target="_blank" rel="noopener">
+                    <img src="images/spot.png" class="card-img-top" alt="Spot" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Spot</h5>
+                        <p class="card-text">Spot is a powerful and easy-to-use tool for effortless deployment and configuration management. It allows users to define a playbook with the list of tasks and targets.</p>
+                    </div>
+                </a>
             </div>
-        </div>
+        </article>
 
-        <div class="col-md-6 col-lg-4">
-            <div class="card mb-4 custom-card" onclick="window.open('https://sys-agent.umputun.dev', '_blank');" style="cursor: pointer;">
-                <img src="images/sys-agent.png" class="card-img-top" alt="sys-agent">
-                <div class="card-body">
-                    <h5 class="card-title">SysAgent</h5>
-                    <p class="card-text">SysAgent is a simple service reporting server status via HTTP GET request. It is useful for monitoring and debugging purposes, but usually used as a part of some other monitoring system collecting data and serving it.</p>
-                </div>
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit SysAgent website">
+                <a href="https://sys-agent.umputun.dev" class="stretched-link" target="_blank" rel="noopener">
+                    <img src="images/sys-agent.png" class="card-img-top" alt="sys-agent" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">SysAgent</h5>
+                        <p class="card-text">SysAgent is a simple service reporting server status via HTTP GET request. It is useful for monitoring and debugging purposes, but usually used as a part of some other monitoring system collecting data and serving it.</p>
+                    </div>
+                </a>
             </div>
-        </div>
+        </article>
         <div class="col-md-6 col-lg-4">
             <div class="card mb-4 custom-card" onclick="window.open('https://safesecret.info/', '_blank');" style="cursor: pointer;">
                 <img src="images/safe-secrets.png" class="card-img-top" alt="safe secrets">
@@ -351,6 +364,23 @@
       "applicationCategory": "DeveloperApplication"
     }
   ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Umputun",
+  "url": "https://umputun.dev",
+  "sameAs": [
+    "https://github.com/umputun",
+    "https://t.me/umputun",
+    "https://twitter.com/umputun"
+  ],
+  "jobTitle": "Software Developer",
+  "email": "umputun@gmail.com",
+  "knowsAbout": ["Go", "Docker", "Self-Hosted Software", "Development Tools", "Proxy Servers", "Logging Systems"]
 }
 </script>
 

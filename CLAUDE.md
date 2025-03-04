@@ -5,7 +5,7 @@
 - Static file serving: `npx serve .` (alternative quick dev option)
 - HTML validation: `npx html-validate index.html`
 - CSS lint: `npx stylelint styles.css`
-- Optimize images: `npx imagemin images/* --out-dir=images`
+- Optimize images: `imagemin images/* --out-dir=images`
 - Validate links: `npx broken-link-checker https://localhost:8080 --recursive`
 
 ## Code Style Guidelines
