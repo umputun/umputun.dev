@@ -12,7 +12,7 @@
     <!-- Open Graph tags -->
     <meta property="og:title" content="Umputun's Development Projects | Self-Hosted Tools & Applications">
     <meta property="og:description" content="Discover a variety of self-hosted applications and tools developed by Umputun. Explore projects like Remark42, Reproxy, Spot, SysAgent, and more.">
-    <meta property="og:image" content="images/umputun.png">
+    <meta property="og:image" content="https://umputun.dev/images/umputun.png">
     <meta property="og:url" content="https://umputun.dev">
     <meta property="og:site_name" content="Umputun's Development Projects">
     <meta property="og:type" content="website">
@@ -22,7 +22,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Umputun's Development Projects | Self-Hosted Tools & Applications">
     <meta name="twitter:description" content="Discover a variety of self-hosted applications and tools developed by Umputun.">
-    <meta name="twitter:image" content="images/umputun.png">
+    <meta name="twitter:image" content="https://umputun.dev/images/umputun.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Resource hints -->
     <link rel="preconnect" href="https://analytics.umputun.com">
@@ -37,10 +42,12 @@
     <!-- Inline critical CSS -->
     <style>
         :root {
-            --dark-bg: #343a40;
-            --card-bg: #3b4449;
-            --card-hover-bg: #354552;
-            --text-color: #fff;
+            --dark-bg: #1e2124;
+            --card-bg: #2c3036;
+            --card-hover-bg: #3a4049;
+            --text-color: #f8f9fa;
+            --accent-color: #4dabf7;
+            --secondary-text: #adb5bd;
         }
         .custom-bg-dark {
             background-color: var(--dark-bg);
@@ -50,12 +57,39 @@
             height: 120px;
             object-fit: contain;
             margin: 0 auto;
-            padding: 10px;
+            padding: 15px 10px;
+            transition: transform 0.3s ease;
         }
         .custom-card {
             background-color: var(--card-bg);
             color: var(--text-color);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background-color: var(--card-hover-bg);
+        }
+        .custom-card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .card-text {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .card-body {
+            padding: 1.5rem;
         }
         .nav-link svg {
             width: 16px;
@@ -63,13 +97,45 @@
             vertical-align: text-bottom;
             margin-right: 4px;
         }
+        .navbar {
+            background-color: rgba(30, 33, 36, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            padding: 1rem 0;
+        }
+        .navbar-brand {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--secondary-text) !important;
+        }
+        .nav-link {
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        main {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            letter-spacing: -0.01em;
+        }
+        footer {
+            padding: 2rem 0;
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 1rem;
+        }
     </style>
 </head>
 
 <body class="custom-bg-dark">
 <a href="#main-content" class="visually-hidden-focusable bg-dark text-white p-2">Skip to main content</a>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
+<nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
     <div class="container">
         <a class="navbar-brand" href="#">Umputun's Development Projects</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,10 +189,7 @@
                 <a href="https://remark42.com" class="stretched-link" target="_blank" rel="noopener">
                     <picture>
                         <source srcset="images/webp/remark42.webp" type="image/webp">
-                        <picture>
-                        <source srcset="images/webp/remark42.webp" type="image/webp">
                         <img src="images/remark42.png" class="card-img-top" alt="Remark42" fetchpriority="high" width="250" height="250">
-                    </picture>
                     </picture>
                     <div class="card-body">
                         <h5 class="card-title">Remark42</h5>
@@ -140,10 +203,7 @@
                 <a href="https://reproxy.io" class="stretched-link" target="_blank" rel="noopener">
                     <picture>
                         <source srcset="images/webp/reproxy.webp" type="image/webp">
-                        <picture>
-                        <source srcset="images/webp/reproxy.webp" type="image/webp">
                         <img src="images/reproxy.png" class="card-img-top" alt="Reproxy" fetchpriority="high" width="761" height="250">
-                    </picture>
                     </picture>
                     <div class="card-body">
                         <h5 class="card-title">Reproxy</h5>
@@ -157,10 +217,7 @@
                 <a href="https://spot.umputun.dev" class="stretched-link" target="_blank" rel="noopener">
                     <picture>
                         <source srcset="images/webp/spot.webp" type="image/webp">
-                        <picture>
-                        <source srcset="images/webp/spot.webp" type="image/webp">
                         <img src="images/spot.png" class="card-img-top" alt="Spot" loading="lazy" width="658" height="250">
-                    </picture>
                     </picture>
                     <div class="card-body">
                         <h5 class="card-title">Spot</h5>
@@ -175,10 +232,7 @@
                 <a href="https://sys-agent.umputun.dev" class="stretched-link" target="_blank" rel="noopener">
                     <picture>
                         <source srcset="images/webp/sys-agent.webp" type="image/webp">
-                        <picture>
-                        <source srcset="images/webp/sys-agent.webp" type="image/webp">
                         <img src="images/sys-agent.png" class="card-img-top" alt="sys-agent" loading="lazy" width="859" height="250">
-                    </picture>
                     </picture>
                     <div class="card-body">
                         <h5 class="card-title">SysAgent</h5>
@@ -187,61 +241,55 @@
                 </a>
             </div>
         </article>
-        <div class="col-md-6 col-lg-4">
-            <div class="card mb-4 custom-card" onclick="window.open('https://safesecret.info/', '_blank');" style="cursor: pointer;">
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Safe Secrets website" onclick="window.open('https://safesecret.info/', '_blank');" style="cursor: pointer;">
                 <picture>
-                        <source srcset="images/webp/safe-secrets.webp" type="image/webp">
-                        <picture>
-                        <source srcset="images/webp/safe-secrets.webp" type="image/webp">
-                        <img src="images/safe-secrets.png" class="card-img-top" alt="safe secrets" loading="lazy" width="251" height="250">
-                    </picture>
-                    </picture>
+                    <source srcset="images/webp/safe-secrets.webp" type="image/webp">
+                    <img src="images/safe-secrets.png" class="card-img-top" alt="Safe Secrets" loading="lazy" width="251" height="250">
+                </picture>
                 <div class="card-body">
                     <h5 class="card-title">Safe Secrets</h5>
                     <p class="card-text">The primary use-case is sharing sensitive data by making the information self-destructed, accessible only once and protected by easy-to-share PIN code.</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="card mb-4 custom-card" onclick="window.open('https://cronn.umputun.dev/', '_blank');" style="cursor: pointer;">
+        </article>
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Cronn website" onclick="window.open('https://cronn.umputun.dev/', '_blank');" style="cursor: pointer;">
                 <picture>
-                        <source srcset="images/webp/cronn.webp" type="image/webp">
-                        <picture>
-                        <source srcset="images/webp/cronn.webp" type="image/webp">
-                        <img src="images/cronn.png" class="card-img-top" alt="cronn" loading="lazy" width="647" height="250">
-                    </picture>
-                    </picture>
+                    <source srcset="images/webp/cronn.webp" type="image/webp">
+                    <img src="images/cronn.png" class="card-img-top" alt="Cronn" loading="lazy" width="647" height="250">
+                </picture>
                 <div class="card-body">
                     <h5 class="card-title">Cronn</h5>
                     <p class="card-text">Cronn is a crontab jobs scheduler with some nice extras. It allows to run commands on specified time intervals and can be used directly as well as from a container.</p>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="col-md-6 col-lg-4">
-            <div class="card mb-4 custom-card" onclick="window.open('https://feed-master.umputun.dev', '_blank');" style="cursor: pointer;">
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Feed Master website" onclick="window.open('https://feed-master.umputun.dev', '_blank');" style="cursor: pointer;">
                 <picture>
-                        <source srcset="images/webp/feed-master.webp" type="image/webp">
-                        <img src="images/feed-master.png" class="card-img-top" alt="feed-master" loading="lazy" width="250" height="250">
-                    </picture>
+                    <source srcset="images/webp/feed-master.webp" type="image/webp">
+                    <img src="images/feed-master.png" class="card-img-top" alt="Feed Master" loading="lazy" width="250" height="250">
+                </picture>
                 <div class="card-body">
                     <h5 class="card-title">Feed Master</h5>
                     <p class="card-text">Feed-Master is a service that aggregates and publishes RSS feeds from multiple sources into a single feed. It normalizes the feeds to ensure that they are valid, compatible with podcast clients, and compliant with the RSS 2.0 specification.</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="card mb-4 custom-card" onclick="window.open('https://updater.umputun.dev/', '_blank');" style="cursor: pointer;">
+        </article>
+        <article class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" tabindex="0" role="button" aria-label="Visit Updater website" onclick="window.open('https://updater.umputun.dev/', '_blank');" style="cursor: pointer;">
                 <picture>
-                        <source srcset="images/webp/updater.webp" type="image/webp">
-                        <img src="images/updater.png" class="card-img-top" alt="updater" loading="lazy" width="1184" height="250">
-                    </picture>
+                    <source srcset="images/webp/updater.webp" type="image/webp">
+                    <img src="images/updater.png" class="card-img-top" alt="Updater" loading="lazy" width="1184" height="250">
+                </picture>
                 <div class="card-body">
                     <h5 class="card-title">Updater</h5>
                     <p class="card-text">Updater is a simple web-hook-based receiver executing things via HTTP requests and invoking remote updates without exposing any sensitive info, like ssh keys, passwords, etc. The updater is usually called from CI/CD systems.</p>
                 </div>
             </div>
-        </div>        
+        </article>        
         <div class="col-md-6 col-lg-4">
             <div class="card mb-4 custom-card" onclick="window.open('https://tg-spam.umputun.dev', '_blank');" style="cursor: pointer;">
                 <picture>
@@ -444,8 +492,12 @@
 
 </main>
 
-<footer class="container mt-4 pb-4 text-center">
-    <p>&copy; 2025 Umputun</p>
+<footer class="container text-center">
+    <div class="row">
+        <div class="col">
+            <p>&copy; 2025 Umputun | Open Source Software Developer</p>
+        </div>
+    </div>
 </footer>
 
 <script type="application/ld+json">
