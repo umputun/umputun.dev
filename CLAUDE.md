@@ -7,6 +7,7 @@
 - CSS lint: `npx stylelint styles.css`
 - Optimize images: `imagemin images/* --out-dir=images`
 - Validate links: `npx broken-link-checker https://localhost:8080 --recursive`
+- CSS Optimization: `npx purgecss --css bootstrap.min.css --content index.html --output css-min/bootstrap.min.css`
 
 ## Code Style Guidelines
 - HTML: Use semantic elements, maintain Bootstrap 5.x conventions with custom dark theme
@@ -25,3 +26,18 @@
 - One-page structure with card-based layout for all projects
 - Images stored in /images directory with descriptive filenames
 - External dependencies (Bootstrap CSS/JS) included directly in root directory
+- Optimized Bootstrap CSS stored in css-min/bootstrap.min.css (reduced from 227KB to 14KB)
+- WebP image formats stored alongside original PNGs in images/webp/ directory
+
+## Performance & Security Optimizations
+- CSS Optimization: Use PurgeCSS to extract only the required Bootstrap components
+- Image Optimization: Provide WebP versions of all images with proper <picture> fallbacks
+- Security Headers: Security headers should be added in Cloudflare dashboard, not in Dockerfile
+  - Content-Security-Policy: Allow scripts from self and analytics.umputun.com
+  - Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  - X-Frame-Options: DENY
+  - Cross-Origin-Opener-Policy: same-origin
+  - X-Content-Type-Options: nosniff
+  - Referrer-Policy: strict-origin-when-cross-origin
+  - Permissions-Policy: restricting camera, microphone, geolocation
+- Caching: Different cache durations for different content types in reproxy
