@@ -334,6 +334,19 @@
         </div>
 
         <div class="col-md-6 col-lg-4">
+            <div class="card mb-4 custom-card" onclick="window.open('https://mpt.umputun.dev', '_blank');" style="cursor: pointer;">
+                <picture>
+                    <source srcset="images/webp/mpt.webp" type="image/webp">
+                    <img src="images/mpt.png" class="card-img-top" alt="MPT" loading="lazy" width="1024" height="400">
+                </picture>
+                <div class="card-body">
+                    <h5 class="card-title">MPT</h5>
+                    <p class="card-text">Multi-Provider Tool (MPT) allows querying multiple AI language models simultaneously. It sends prompts to OpenAI, Anthropic, Google, and custom providers in parallel with rich context from files and code snippets.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
             <div class="card mb-4 custom-card" onclick="window.open('https://github.com/umputun/docker-logger', '_blank');" style="cursor: pointer;">
                 <picture>
                         <source srcset="images/webp/docker-logger.webp" type="image/webp">
@@ -553,6 +566,14 @@
     {
       "@type": "SoftwareApplication",
       "position": 3,
+      "name": "MPT",
+      "description": "Multi-Provider Tool (MPT) allows querying multiple AI language models simultaneously with rich context from files and code snippets.",
+      "url": "https://mpt.umputun.dev",
+      "applicationCategory": "DeveloperApplication"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 4,
       "name": "Reproxy",
       "description": "Reproxy is a simple edge HTTP(s) server / reverse proxy supporting various providers.",
       "url": "https://reproxy.io",
@@ -560,7 +581,7 @@
     },
     {
       "@type": "SoftwareApplication",
-      "position": 4,
+      "position": 5,
       "name": "Spot",
       "description": "Spot is a powerful and easy-to-use tool for effortless deployment and configuration management.",
       "url": "https://spot.umputun.dev",
@@ -568,7 +589,7 @@
     },
     {
       "@type": "SoftwareApplication",
-      "position": 5,
+      "position": 6,
       "name": "Echo-HTTP",
       "description": "Echo-HTTP is a simple service that responds with a JSON-formatted echo of the incoming request.",
       "url": "https://echo.umputun.com",
@@ -576,7 +597,7 @@
     },
     {
       "@type": "SoftwareApplication",
-      "position": 6,
+      "position": 7,
       "name": "Proxy-Cron",
       "description": "A smart HTTP proxy with crontab scheduling that serves cached responses outside scheduled times.",
       "url": "https://proxy-cron.umputun.dev",
@@ -584,7 +605,7 @@
     },
     {
       "@type": "SoftwareApplication",
-      "position": 7,
+      "position": 8,
       "name": "DKLL",
       "description": "A comprehensive logging solution for Docker environments with agent, server, and CLI components.",
       "url": "https://github.com/umputun/dkll",
