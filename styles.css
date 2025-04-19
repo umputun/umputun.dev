@@ -100,6 +100,15 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .card-text {
+        max-height: 160px;
+    }
+    .custom-card {
+        height: 360px;
+    }
+}
+
 .visually-hidden-focusable:not(:focus):not(:focus-within) {
     position: absolute !important;
     width: 1px !important;
