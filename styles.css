@@ -51,8 +51,6 @@
 .custom-card:hover {
     background-color: var(--card-hover-bg);
     border-color: var(--border-hover-color);
-    border-width: 3px;
-    padding: 8px;
     box-shadow: 0 0 8px var(--shadow-color);
 }
 
