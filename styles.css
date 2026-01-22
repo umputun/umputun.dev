@@ -175,7 +175,7 @@ main.container {
 .card-img-top {
     height: 120px;
     width: auto;
-    max-width: 250px;
+    max-width: 90%;
     object-fit: contain;
     margin: 0 auto;
     padding: 15px 10px;
