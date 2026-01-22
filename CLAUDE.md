@@ -10,14 +10,14 @@
 - CSS Optimization: `npx purgecss --css bootstrap.min.css --content index.html --output css-min/bootstrap.min.css`
 
 ## Code Style Guidelines
-- HTML: Use semantic elements, maintain Bootstrap 5.x conventions with custom dark theme
+- HTML: Use semantic elements, vanilla HTML without framework dependencies
 - CSS: Use descriptive class names with custom- prefix for project-specific styles
 - JavaScript: Vanilla JS only, keep scripts minimal and focused on UI enhancements
-- Images: PNG format, 120px height, optimized for web, consistent dimensions for cards
+- Images: PNG format, 120px height, max-width 250px, optimized for web, consistent dimensions for cards
 - Card Structure: Maintain consistent card layout with title, image, and description
 - Naming: kebab-case for CSS classes (custom-bg-dark), camelCase for JS variables
-- Colors: Dark theme palette (#343a40, #3b4449, #354552) consistent with existing design
-- Responsive Design: Bootstrap grid with col-md-6 col-lg-4 pattern for cards
+- Colors: Dark theme palette (#1e2124 bg, #2c3036 card, #3a4049 hover) consistent with existing design
+- Responsive Design: CSS Grid with `repeat(1/2/3, 1fr)` at breakpoints 768px/992px for 3-column card layouts
 - Meta Tags: Maintain complete set of SEO tags including OG properties for sharing
 - Link Behavior: All project cards open external links in new tabs with onclick handlers
 - Analytics: Preserve analytics script tag with correct data-website-id
@@ -25,12 +25,11 @@
 ## Project Organization
 - One-page structure with card-based layout for all projects
 - Images stored in /images directory with descriptive filenames
-- External dependencies (Bootstrap CSS/JS) included directly in root directory
-- Optimized Bootstrap CSS stored in css-min/bootstrap.min.css (reduced from 227KB to 14KB)
+- No external framework dependencies - vanilla CSS/JS only
 - WebP image formats stored alongside original PNGs in images/webp/ directory
 
 ## Performance & Security Optimizations
-- CSS Optimization: Use PurgeCSS to extract only the required Bootstrap components
+- CSS Bundle Size: Vanilla CSS (6KB) vs Bootstrap (95KB) - 88KB reduction for simple layouts
 - Image Optimization: Provide WebP versions of all images with proper <picture> fallbacks
 - Security Headers: Security headers should be added in Cloudflare dashboard, not in Dockerfile
   - Content-Security-Policy: Allow scripts from self and analytics.umputun.com
@@ -41,3 +40,13 @@
   - Referrer-Policy: strict-origin-when-cross-origin
   - Permissions-Policy: restricting camera, microphone, geolocation
 - Caching: Different cache durations for different content types in reproxy
+
+## CSS Architecture & Patterns
+- **CSS Specificity Management**: When mixing utility classes with semantic selectors, class selectors (`.container`) override element selectors (`footer`). Use combined selectors (`footer.container`) to increase specificity and control precedence
+- **Vanilla CSS Grid for Responsive Layout**: CSS Grid with `repeat(1/2/3, 1fr)` at different breakpoints (768px, 992px) replaces Bootstrap grid system effectively for card layouts
+- **Navbar Mobile Toggle Pattern**: Pure CSS/JS hamburger menu using SVG icon, `display: none` toggle on `.navbar-collapse.show`, z-index layering for dropdown over content
+
+## Testing & Debugging Workflow
+- **Playwright for Visual Verification**: Use Playwright with `page.evaluate()` to extract computed CSS values when browser dev tools show different results than file content - catches caching and specificity issues
+- **CSS Debugging Pattern**: When styles don't apply, check: (1) browser cache, (2) CSS file served correctly via curl, (3) computed styles in browser, (4) CSS specificity order
+- **npx serve Caching**: Development server caches CSS aggressively - kill and restart completely when styles don't update, not just hard refresh
