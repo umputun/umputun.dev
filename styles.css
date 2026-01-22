@@ -160,9 +160,9 @@ a:visited, a:focus {
     color: var(--text-color);
 }
 
-main {
+main.container {
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
 }
 
 /* Card styles */
@@ -318,12 +318,13 @@ main {
 }
 
 /* Footer */
-footer {
-    padding: 2rem 0;
+footer.container {
+    padding: 2.5rem 1rem;
     font-size: 0.9rem;
     color: var(--secondary-text);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #1a1d20;
+    max-width: 100%;
 }
 
 footer p {
