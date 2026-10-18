@@ -5,7 +5,6 @@
 - Static file serving: `npx serve .` (alternative quick dev option)
 - Quick visual preview: open `index.html` directly in the browser via `file://` - all asset paths are relative, so no server is needed. Use a local server (`npx serve` / `python3 -m http.server`) only when testing server-relative paths or cache behavior.
 - HTML validation: `npx html-validate index.html`
-- CSS lint: `npx stylelint styles.css`
 - Optimize images: `imagemin images/* --out-dir=images`
 - Validate links: `npx broken-link-checker https://localhost:8080 --recursive`
 - CSS Optimization: `npx purgecss --css bootstrap.min.css --content index.html --output css-min/bootstrap.min.css`
