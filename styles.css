@@ -198,6 +198,7 @@ main.container {
 .custom-card {
     background-color: var(--card-bg);
     color: var(--text-color);
+    text-decoration: none;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);

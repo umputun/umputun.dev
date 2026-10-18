@@ -20,7 +20,7 @@
 - Colors: Dark theme palette (#1e2124 bg, #2c3036 card, #3a4049 hover) consistent with existing design
 - Responsive Design: CSS Grid with `repeat(1/2/3, 1fr)` at breakpoints 768px/992px for 3-column card layouts
 - Meta Tags: Maintain complete set of SEO tags including OG properties for sharing
-- Link Behavior: All project cards open external links in new tabs with onclick handlers
+- Link Behavior: Each project card is an `<a class="custom-card" href="..." target="_blank" rel="noopener">`, ordered by GitHub stars (go-pkgz by org total)
 - Analytics: Preserve analytics script tag with correct data-website-id
 
 ## Project Organization
